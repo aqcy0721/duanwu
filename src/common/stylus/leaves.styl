@@ -1,0 +1,89 @@
+#leafContainer
+{
+  position: absolute;
+  width: 100%;
+  height 100%;
+  top 0
+  left 0
+}
+
+
+
+#leafContainer > div
+{
+  position: absolute;
+  -webkit-animation-iteration-count: infinite, infinite;
+  -webkit-animation-direction: normal, normal;
+  -webkit-animation-timing-function: linear, ease-in;
+}
+
+/* This CSS rule is applied to all img elements directly inside div elements which are
+   directly inside the leafContainer div. In other words, it matches the 'img' elements
+   inside the leafDivs which are created in the createALeaf() function.
+*/
+#leafContainer > div > img {
+  position: absolute;
+
+  /* We use the following properties to adjust the clockwiseSpin or counterclockwiseSpinAndFlip
+     animations on each leaf.
+     The createALeaf function in the Leaves.js file determines whether a leaf has the
+     clockwiseSpin or counterclockwiseSpinAndFlip animation.
+  */
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-transform-origin: 50% -100%;
+}
+
+
+
+
+@-webkit-keyframes drop {
+  0% {
+    -webkit-transform: translate(0px, -50px);
+    transform: translate(0px, -50px);
+  }
+
+  100% {
+    -webkit-transform: translate(0px, 650px);
+    transform: translate(0px, 650px);
+  }
+}
+
+.clockwiseSpin {
+  -webkit-animation-name: clockwiseSpin;
+  animation-name: clockwiseSpin
+}
+@-webkit-keyframes clockwiseSpin {
+  0% {
+    -webkit-transform: rotate(-50deg);
+    transform: rotate(-50deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(50deg);
+    transform: rotate(50deg);
+  }
+}
+
+.clockwiseSpin {
+  -webkit-animation-name: clockwiseSpin;
+  animation-name: clockwiseSpin
+}
+
+
+@-webkit-keyframes counterclockwiseSpinAndFlip {
+  0% {
+    -webkit-transform: scale(-1, 1) rotate(50deg);
+    transform: scale(-1, 1) rotate(50deg);
+  }
+
+  100% {
+    -webkit-transform: scale(-1, 1) rotate(-50deg);
+    transform: scale(-1, 1) rotate(-50deg);
+  }
+}
+.counterclockwiseSpinAndFlip {
+  -webkit-animation-name: counterclockwiseSpinAndFlip;
+  animation-name: counterclockwiseSpinAndFlip
+}

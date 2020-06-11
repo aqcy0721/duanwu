@@ -1,0 +1,65 @@
+@import "variable.styl"
+
+body, html
+  line-height: 1
+  font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif, 'Droid Sans Fallback'
+  -webkit-tap-highlight-color: transparent
+  background: $bg
+  color: $color-text
+
+.init-color
+    color $color-theme
+.warn-color
+    color #ff6024!important
+.yellow
+    color #ffc600!important
+.ff6328
+    color #ff6328!important
+.c46c978
+    color #46c978!important
+.c0c99f9
+  color #0c99f9!important
+
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: #b7b7b7
+}
+textarea
+  border 0
+  padding 0
+  outline none
+  color: #666;
+
+
+.loading-container
+  position: absolute
+  width: 100%
+  top: 50%
+  transform: translateY(-50%)
+
+
+button,input,optgroup,option,select,textarea
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit
+
+button,input
+  overflow: visible;
+  vertical-align: middle;
+  outline: none;
+  border: 0
+
+button,input[type=button],input[type=submit]
+  line-height: normal!important;
+  cursor: pointer
+
+.clear-fix:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #20795B;
+  font-size: .32rem;
+}
